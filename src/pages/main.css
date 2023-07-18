@@ -3,6 +3,7 @@ main {
   height: 100vh;
   background-color: #fff;
   padding: 40px 76px;
+  scroll-behavior: smooth;
 }
 
 section {

@@ -3,6 +3,10 @@ import { Header } from "./component/Header";
 import { MainPage } from "./pages/MainPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { App404 } from "./component/App404";
+import { Electronics } from "./component/filters/Electronics";
+import { Jewelery } from "./component/filters/Jewelery";
+import { MensClothing } from "./component/filters/MensClothing";
+import { WomensClothing } from "./component/filters/WomensClothing";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -11,7 +15,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://fakestoreapi.com/products?limit=10")
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
         setCartItem(data);
@@ -33,6 +37,22 @@ function App() {
               loading={loading}
             />
           }
+        />
+        <Route
+          path="/category/electronics"
+          element={<Electronics cartItem={cartItem} />}
+        />
+        <Route
+          path="/category/jewelery"
+          element={<Jewelery cartItem={cartItem} />}
+        />
+        <Route
+          path="/category/clothing/men"
+          element={<MensClothing cartItem={cartItem} />}
+        />
+        <Route
+          path="/category/clothing/women"
+          element={<WomensClothing cartItem={cartItem} />}
         />
         <Route path="*" element={<App404 />} />
       </Routes>

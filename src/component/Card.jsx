@@ -22,7 +22,7 @@ export const Card = ({ cartItem, cartAdded, setCartAdded }) => {
             <img src={item.image} alt="img" className="card__img" />
             <h4>{item.title}</h4>
             <p>${item.price}</p>
-            <p>{item.category}</p>
+
             <button onClick={handleAddToCart} className="card__button">
               Add to Cart
             </button>
