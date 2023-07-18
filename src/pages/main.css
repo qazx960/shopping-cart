@@ -1,6 +1,17 @@
 main {
   width: 100vw;
   height: 100vh;
-  background-color: #b8b7b7;
+  background-color: #fff;
   padding: 40px 76px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
 }
