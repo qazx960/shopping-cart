@@ -1,0 +1,8 @@
+.navigation__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  background-color: #184963;
+  color: #fff;
+}
