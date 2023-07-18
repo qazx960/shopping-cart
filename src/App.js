@@ -18,7 +18,12 @@ function App() {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
-        setCartItem(data);
+        const productNotInCart = data.map((product) => ({
+          ...product,
+          checked: false,
+        }));
+        setCartItem(productNotInCart);
+        console.log(productNotInCart);
         setLoading(false);
       });
   }, []);
