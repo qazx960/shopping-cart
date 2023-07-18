@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 export const Header = ({ cartAdded, setCartAdded }) => {
   return (
@@ -10,9 +11,10 @@ export const Header = ({ cartAdded, setCartAdded }) => {
           <h2>Shop Cart Project</h2>
         </Link>
       </div>
-      <div>
+      <div className="cart">
         <Link to="/cart">
-          <h2>Cart {cartAdded}</h2>
+          <FaShoppingCart size={24} />
+          <span className="cart__count">{cartAdded}</span>
         </Link>
       </div>
     </nav>
