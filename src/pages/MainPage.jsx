@@ -7,7 +7,11 @@ export const MainPage = ({ cartItem, cartAdded, setCartAdded }) => {
     <main>
       <section>
         <h1>Products</h1>
-        <Card cartItem={cartItem} />
+        <Card
+          cartItem={cartItem}
+          cartAdded={cartAdded}
+          setCartAdded={setCartAdded}
+        />
       </section>
     </main>
   );

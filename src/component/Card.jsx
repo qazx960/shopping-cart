@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import "./card.css";
 import "./popup.css";
 
-export const Card = ({ cartItem }) => {
+export const Card = ({ cartItem, cartAdded, setCartAdded }) => {
   const [addProduct, setAddProduct] = useState(false);
 
   const handleAddToCart = () => {
     setAddProduct(true);
-
+    setCartAdded(cartAdded + 1);
     // Set a timeout to hide the popup after 2 seconds (2000 milliseconds)
     setTimeout(() => {
       setAddProduct(false);
     }, 3000);
   };
+
   return (
     <section>
       <div className="card__list">

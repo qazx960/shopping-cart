@@ -17,7 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header cartAdded={cartAdded} setCartAdded={setCartAdded} />
       <Routes>
         <Route
           path="/"

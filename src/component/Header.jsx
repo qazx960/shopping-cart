@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ cartAdded, setCartAdded }) => {
   return (
     <nav className="navigation__bar">
       <div>
@@ -12,7 +12,7 @@ export const Header = () => {
       </div>
       <div>
         <Link to="/cart">
-          <h2>Cart</h2>
+          <h2>Cart {cartAdded}</h2>
         </Link>
       </div>
     </nav>
