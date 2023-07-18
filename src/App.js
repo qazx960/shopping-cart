@@ -47,19 +47,29 @@ function App() {
         />
         <Route
           path="/cart"
-          element={<CartPage cartItem={cartItem} loading={loading} />}
+          element={
+            <CartPage
+              cartItem={cartItem}
+              loading={loading}
+              setCartAdded={setCartAdded}
+            />
+          }
         />
         <Route
           path="/category/electronics"
-          element={<Electronics cartItem={cartItem} />}
+          element={
+            <Electronics cartItem={cartItem} setCartAdded={setCartAdded} />
+          }
         />
         <Route
           path="/category/jewelery"
-          element={<Jewelery cartItem={cartItem} />}
+          element={<Jewelery cartItem={cartItem} setCartAdded={setCartAdded} />}
         />
         <Route
           path="/category/clothing/men"
-          element={<MensClothing cartItem={cartItem} />}
+          element={
+            <MensClothing cartItem={cartItem} setCartAdded={setCartAdded} />
+          }
         />
         <Route
           path="/category/clothing/women"
