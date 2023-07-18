@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Header } from "./component/Header";
 import { MainPage } from "./pages/MainPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { App404 } from "./component/App404";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -13,10 +15,13 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <MainPage cartItem={cartItem} />
-    </>
+      <Routes>
+        <Route path="/" element={<MainPage cartItem={cartItem} />} />
+        <Route path="*" element={<App404 />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
