@@ -4,6 +4,15 @@ import "./popup.css";
 
 export const Card = ({ cartItem }) => {
   const [addProduct, setAddProduct] = useState(false);
+
+  const handleAddToCart = () => {
+    setAddProduct(true);
+
+    // Set a timeout to hide the popup after 2 seconds (2000 milliseconds)
+    setTimeout(() => {
+      setAddProduct(false);
+    }, 3000);
+  };
   return (
     <section>
       <div className="card__list">
@@ -13,9 +22,7 @@ export const Card = ({ cartItem }) => {
             <h4>{item.title}</h4>
             <p>{item.price}</p>
             <p>{item.category}</p>
-            <button onClick={() => setAddProduct(!addProduct)}>
-              Add to Cart
-            </button>
+            <button onClick={handleAddToCart}>Add to Cart</button>
           </div>
         ))}
       </div>
