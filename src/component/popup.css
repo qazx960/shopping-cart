@@ -1,0 +1,16 @@
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  transition: right 0.3s ease;
+}
+
+.popup__item {
+  background-color: rgb(65, 230, 65);
+  color: #fff;
+  padding: 15px;
+  width: 200px;
+  border-radius: 12px;
+  text-align: center;
+}

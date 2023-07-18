@@ -6,3 +6,16 @@
   background-color: #184963;
   color: #fff;
 }
+
+.cart {
+  position: relative;
+
+  width: 40px;
+}
+
+.cart__count {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  font-size: 15px;
+}
