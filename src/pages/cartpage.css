@@ -10,6 +10,7 @@
 .cart__container {
   /* border: 1px solid black; */
   height: 100vh;
+
   padding: 40px;
 
   display: flex;
@@ -20,7 +21,7 @@
 .cart__item {
   border: 1px solid gray;
   margin: 20px 40px;
-  height: 150px;
+  height: 180px;
   padding: 8px;
 
   display: flex;

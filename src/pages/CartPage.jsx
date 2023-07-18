@@ -18,6 +18,7 @@ export const CartPage = ({ cartItem, loading }) => {
               <div key={product.id} className="cart__item">
                 <img src={product.image} alt="" className="cart__image" />
                 <h5> {product.title}</h5>
+                <p>{product.price}</p>
               </div>
             ))}
           </div>

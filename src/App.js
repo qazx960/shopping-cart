@@ -58,22 +58,46 @@ function App() {
         <Route
           path="/category/electronics"
           element={
-            <Electronics cartItem={cartItem} setCartAdded={setCartAdded} />
+            <Electronics
+              cartItem={cartItem}
+              setCartAdded={setCartAdded}
+              cartAdded={cartAdded}
+              setCartItem={setCartItem}
+            />
           }
         />
         <Route
           path="/category/jewelery"
-          element={<Jewelery cartItem={cartItem} setCartAdded={setCartAdded} />}
+          element={
+            <Jewelery
+              cartItem={cartItem}
+              setCartAdded={setCartAdded}
+              cartAdded={cartAdded}
+              setCartItem={setCartItem}
+            />
+          }
         />
         <Route
           path="/category/clothing/men"
           element={
-            <MensClothing cartItem={cartItem} setCartAdded={setCartAdded} />
+            <MensClothing
+              cartItem={cartItem}
+              setCartAdded={setCartAdded}
+              cartAdded={cartAdded}
+              setCartItem={setCartItem}
+            />
           }
         />
         <Route
           path="/category/clothing/women"
-          element={<WomensClothing cartItem={cartItem} />}
+          element={
+            <WomensClothing
+              cartItem={cartItem}
+              setCartAdded={setCartAdded}
+              cartAdded={cartAdded}
+              setCartItem={setCartItem}
+            />
+          }
         />
         <Route path="*" element={<App404 />} />
       </Routes>

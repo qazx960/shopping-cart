@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./card.css";
 import "./popup.css";
+import { DisplayPopup } from "./DisplayPopup";
 
 export const Card = ({ cartItem, cartAdded, setCartAdded, setCartItem }) => {
   const [addProduct, setAddProduct] = useState(false);
@@ -43,15 +44,5 @@ export const Card = ({ cartItem, cartAdded, setCartAdded, setCartItem }) => {
       </div>
       {addProduct && <DisplayPopup />}
     </section>
-  );
-};
-
-export const DisplayPopup = () => {
-  return (
-    <div className="popup">
-      <ul className="popup__list">
-        <li className="popup__item">Added to Cart!</li>
-      </ul>
-    </div>
   );
 };
