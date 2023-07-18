@@ -1,15 +1,4 @@
-<<<<<<< HEAD
+# mini shopping-cart 
+<p>Using https://fakestoreapi.com/docs, use the API to call a list of products. Each product can be filtered and added to the cart.</p>
 
-# shopping-cart
-
-# Mainpages
-
-- show list of items that can be added to cart
-
-# Header
-
-Once item is added to cart, display on header as number
-
-# Cart
-
-# Show list of items that were added with total price
+![ezgif com-video-to-gif](https://github.com/qazx960/shopping-cart/assets/97396473/4ceff845-cf68-40f5-b142-047adfea1811)
