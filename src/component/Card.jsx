@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./card.css";
 
 export const Card = () => {
-  return <div className="card"></div>;
+  const [addProduct, setAddProduct] = useState(false);
+  return (
+    <div className="card">
+      <img src="" alt="img" />
+      <p>Title</p>
+      <p>price :</p>
+      <button onClick={() => setAddProduct(!addProduct)}>Add to Cart</button>
+    </div>
+  );
 };
