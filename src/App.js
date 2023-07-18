@@ -7,6 +7,7 @@ import { Electronics } from "./component/filters/Electronics";
 import { Jewelery } from "./component/filters/Jewelery";
 import { MensClothing } from "./component/filters/MensClothing";
 import { WomensClothing } from "./component/filters/WomensClothing";
+import { CartPage } from "./pages/CartPage";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -40,8 +41,13 @@ function App() {
               cartAdded={cartAdded}
               setCartAdded={setCartAdded}
               loading={loading}
+              setCartItem={setCartItem}
             />
           }
+        />
+        <Route
+          path="/cart"
+          element={<CartPage cartItem={cartItem} loading={loading} />}
         />
         <Route
           path="/category/electronics"

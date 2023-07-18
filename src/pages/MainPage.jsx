@@ -5,7 +5,13 @@ import { Loading } from "../component/Loading";
 import { CategoryIcons } from "../component/CategoryIcons";
 // import spinner from "../spinner.gif";
 
-export const MainPage = ({ cartItem, cartAdded, setCartAdded, loading }) => {
+export const MainPage = ({
+  cartItem,
+  cartAdded,
+  setCartAdded,
+  loading,
+  setCartItem,
+}) => {
   return (
     <main>
       <section>
@@ -19,6 +25,7 @@ export const MainPage = ({ cartItem, cartAdded, setCartAdded, loading }) => {
             cartItem={cartItem}
             cartAdded={cartAdded}
             setCartAdded={setCartAdded}
+            setCartItem={setCartItem}
           />
         )}
       </section>

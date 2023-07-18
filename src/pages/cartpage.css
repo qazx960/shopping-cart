@@ -1,0 +1,12 @@
+.cart__layout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 40px 76px;
+  scroll-behavior: smooth;
+}
+
+.cart__container {
+  border: 1px solid black;
+  height: 100vh;
+}
