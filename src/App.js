@@ -7,11 +7,15 @@ import { App404 } from "./component/App404";
 function App() {
   const [cartItem, setCartItem] = useState([]);
   const [cartAdded, setCartAdded] = useState(0);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    setLoading(true);
     fetch("https://fakestoreapi.com/products?limit=10")
       .then((res) => res.json())
       .then((data) => {
         setCartItem(data);
+        setLoading(false);
       });
   }, []);
 
@@ -26,6 +30,7 @@ function App() {
               cartItem={cartItem}
               cartAdded={cartAdded}
               setCartAdded={setCartAdded}
+              loading={loading}
             />
           }
         />
