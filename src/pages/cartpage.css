@@ -1,0 +1,35 @@
+.cart__layout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 40px 76px;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+.cart__container {
+  /* border: 1px solid black; */
+  height: 100vh;
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.cart__item {
+  border: 1px solid gray;
+  margin: 20px 40px;
+  height: 180px;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cart__image {
+  width: 60px;
+}
