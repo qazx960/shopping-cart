@@ -20,9 +20,11 @@ export const Card = ({ cartItem }) => {
           <div className="card" key={item.id}>
             <img src={item.image} alt="img" className="card__img" />
             <h4>{item.title}</h4>
-            <p>{item.price}</p>
+            <p>${item.price}</p>
             <p>{item.category}</p>
-            <button onClick={handleAddToCart}>Add to Cart</button>
+            <button onClick={handleAddToCart} className="card__button">
+              Add to Cart
+            </button>
           </div>
         ))}
       </div>
